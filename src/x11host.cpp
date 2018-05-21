@@ -129,7 +129,7 @@ x11_window_create(X11Host* host)
 
     window->window = xcb_generate_id(host->connection);
     xcb_create_window(host->connection, XCB_COPY_FROM_PARENT,
-        window->window, host->screen->root, 0, 0, 1280, 720,
+        window->window, host->screen->root, 0, 0, 1920, 1080,
         0, XCB_WINDOW_CLASS_INPUT_OUTPUT, host->screen->root_visual,
         mask, values);
 

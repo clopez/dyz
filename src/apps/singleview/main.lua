@@ -52,7 +52,7 @@ function module.run(args)
     local window = wlglue.wlglue_window_create(host, window_client)
 
     local exportable_client = ffi.new("struct wpe_view_backend_exportable_fdo_client")
-    local exportable = wpebackend_fdo.wpe_view_backend_exportable_fdo_create(exportable_client, nil, 1280, 720)
+    local exportable = wpebackend_fdo.wpe_view_backend_exportable_fdo_create(exportable_client, nil, 1920, 1080)
     local exportable_view_backend = wpebackend_fdo.wpe_view_backend_exportable_fdo_get_view_backend(exportable)
 
     window_client.frame_displayed =

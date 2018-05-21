@@ -577,7 +577,7 @@ wlglue_window_create(struct WlGlueHost* host, struct wlglue_window_client* clien
         }
     }
 
-    window->eglWindow = wl_egl_window_create(window->surface, 1280, 720);
+    window->eglWindow = wl_egl_window_create(window->surface, 1920, 1080);
 
     auto createPlatformWindowSurface =
         reinterpret_cast<PFNEGLCREATEPLATFORMWINDOWSURFACEEXTPROC>(eglGetProcAddress("eglCreatePlatformWindowSurfaceEXT"));
@@ -628,7 +628,7 @@ wlglue_window_create(struct WlGlueHost* host, struct wlglue_window_client* clien
         glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 	    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
     	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
-        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 1280, 720, 0, GL_RGBA, GL_UNSIGNED_BYTE, nullptr);
+        glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, 1920, 1080, 0, GL_RGBA, GL_UNSIGNED_BYTE, nullptr);
         glBindTexture(GL_TEXTURE_2D, 0);
     }
 
